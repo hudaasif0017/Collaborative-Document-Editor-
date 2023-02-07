@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Document Editor</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <a href="#" class="nav-logo padding-nav" >
+            <img class="model" src="logo/logo.png" alt="">
+            <img class="model" src="logo/logo.svg" alt="">
+            <input type="txt" name="search" placeholder="Search Document by Title..." class="searchbar ">
+        </a>   
+
+
+
+        <div href="#"  class="f-right clearl" style="padding-right: 85px" >
+            
+            <a  href="mydocuments.html" class="f-right clearl" id="navtip">
+
+                <img src="assets/icon-mydocuments.png" alt=""  class="settings" >
+                <span class="navtiptext hovertext">View my Documents</span>
+
+            </a>
+            
+            <a href="#"  class="f-right clearl" id="navtip" onclick="appear()">
+                
+                <img src="assets/icon-add.png" alt=""  class="settings">
+                <span class="navtiptext hovertext">Create new document</span>
+            
+            </a>
+
+        </div>
+
+        
+    </nav>
+
+    <div id="post-content" class="pad-left">
+
+        <section class="section-form ">
+
+            <div class="container ">
+                
+                <div class="row">
+
+                    <div class="col-lg-8 offset-lg-1 arrangment"> 
+                       
+                        <div class="clearR doclisttitle">
+
+                            <div class="f-left check2">
+                                Documents by title
+                            </div>
+                            
+                            <div class="f-right check">
+                                last Update
+                            </div>
+
+                            <div class="f-right check">
+                                owned by
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="col-lg-8 offset-lg-1 arrangment-main"> 
+                        
+                        <div class="clearR doclist">
+
+                            <div class="f-left check2">
+                                <a href="">
+                                    Document name
+                                </a>
+                            </div>
+
+                             <div class="f-right check">
+                               01-03-2021
+                            </div>
+                            
+                            <div class="f-right check">
+                                me
+                            </div>
+                        </div>                        
+
+                        <div class="clearR doclist">
+                            
+                            <div class="f-left check2">
+                                <a href="">
+                                    Document name
+                                </a>
+                            </div>
+
+                             <div class="f-right check">
+                               01-03-2021
+                            </div>
+                            
+                            <div class="f-right check">
+                                anyone
+                            </div>
+        
+                        </div>
+
+                        <div class="clearR doclist">
+                            
+                            <div class="f-left check2">
+                                <a href="">
+                                    Document name
+                                </a>
+                            </div>
+
+                             <div class="f-right check">
+                                01-03-2021
+                            </div>
+                            
+                            <div class="f-right check">
+                                any name
+                            </div>
+                        
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+<div  class="bg-modal1" id="mydocname">
+        <div class="menu">
+            <ul>
+                <li >
+                    <textarea class="entername" placeholder="&#9;Enter Document name" wrap="on"></textarea>
+                </li>
+                <li >
+                    <a href="create.html" > Next <a>
+                </li>   
+                <li >
+                    <a onclick="appear()"> cancel <a>
+                </li>    
+            </ul>
+        </div> 
+    </div>       
+   
+<script type="text/javascript">
+    
+        function appear(){
+
+                document.getElementById("mydocname").classList.toggle("bg-modal2");
+               
+            }
+
+                   
+   
+
+</script>   
+</body>
+
+</html>
