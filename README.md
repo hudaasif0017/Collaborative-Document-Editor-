@@ -1,4 +1,4 @@
-knot
+knot:
 This website is Real-time Distributed and Decentalized Collaborative Plafrom which enables collaborative editing anywhere, at anytime, whatever the number of participants.
 
 Requirments:
