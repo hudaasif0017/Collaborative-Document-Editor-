@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Document Editor</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+
+    <nav id="navbar">
+        
+        <a href="#" class="nav-logo padding-nav" >
+            <img class="model" src="logo/logo.png" alt="">
+            <img class="model" src="logo/logo.svg" alt="">
+        </a>
+        
+
+        <div href="#"  class="f-right clearl" style="padding-right: 85px" >
+            
+            <a  href="mydocuments.html" class="f-right clearl" id="navtip">
+
+                <img src="assets/icon-mydocuments.png" alt=""  class="settings" >
+                <span class="navtiptext hovertext">View my Documents</span>
+
+            </a>
+            
+
+        </div>
+        
+    </nav>
+
+    
+
+    <div id="post-content" class="pad-left">
+        
+        <section class="section-form">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-12 offset-lg-1 arrangment"> 
+                       
+                        <div class="clearR doclisttitle">
+
+                            <div class="f-left check2 nav-doc" >
+                                Document Name
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                        <!-- SECTION SIDE VERTICAL TOOLBAR -->
+
+                        <div class="offset-lg-1">
+                            
+                            <div class="">
+
+                                <table class="table">
+
+                                    <tr>
+                                        <td>
+                                            <div onclick="hide()" id="tooltip">
+                                                <img src="assets/icon-preview.png" id="hide" alt=""  class="toolbar" ></img>
+                                                <span class="tooltiptext hovertext">Switch to preview/editor</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div onclick="visibility()" id="tooltip">
+                                                <img src="assets/icon-private.svg" id="visibility" alt=""  class="toolbar" ></img>
+                                                <span class="tooltiptext hovertext">Make Private/Public</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr >
+                                        <td>
+                                            <div onclick="appear();" id="tooltip">
+                                                <img src="assets/icon-share.png"  id="menu-pop"alt="" class="toolbar"></img>
+                                                <span class="tooltiptext hovertext">Share</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr >
+                                        <td>
+                                            <div id="tooltip">
+                                                <img src="assets/icon-save.png" alt="" class="toolbar"></img>
+                                                <span class="tooltiptext hovertext">Save</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr >
+                                        <td>
+                                            <div id="tooltip">
+                                                <img src="assets/icon-download.png" alt="" class="toolbar"></img>
+                                                <span class="tooltiptext hovertext">Download</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <!---SECTION TEXTAREA -->
+
+
+                        <div class="offset-lg-0">
+
+                            <div class="">
+                                <textarea class="boundtext" wrap="on" autocorrect="on" autocapitalize="sentences" spellcheck="true" placeholder="Start working"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        
+        </section>
+
+    </div>
+
+    <!-- SECTION URL -->
+
+
+    <div onclick="appear();" class="bg-modal1" id="myDiv">
+        <div class="menu">
+            <ul>
+                <li >Url here</li>
+                <li >
+                    <a > Copy url<a>
+                </li>       
+            </ul>
+        </div> 
+    </div>
+
+<script type="text/javascript">
+        
+        function visibility(){
+
+            var img = document.getElementById('visibility').src;
+            if (img.indexOf('assets/icon-private.svg')!=-1) {
+                document.getElementById('visibility').src  = 'assets/icon-public.svg';
+            }
+             else {
+               document.getElementById('visibility').src = 'assets/icon-private.svg';
+           }
+
+           
+        }
+
+         function hide(){
+
+            var img = document.getElementById('hide').src;
+            if (img.indexOf('assets/icon-preview.png')!=-1) {
+                document.getElementById('hide').src  = 'assets/icon-hide.png';
+            }
+             else {
+               document.getElementById('hide').src = 'assets/icon-preview.png';
+           }
+
+           
+        }
+    
+        function appear(){
+
+                document.getElementById("myDiv").classList.toggle("bg-modal2");
+               
+            }
+
+                   
+   
+
+</script>
+
+</body>
+</html>
